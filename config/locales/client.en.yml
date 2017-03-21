@@ -1,0 +1,10 @@
+en:
+  admin_js:
+    admin:
+      web_hooks:
+        notification_event:
+          name: "Notification Event"
+          details: "When there is a new notification."
+        session_event:
+          name: "Session Event"
+          details: "When there is a login or logout."
