@@ -7,6 +7,8 @@ PLUGIN_NAME = 'discourse_webhooks_example'.freeze
 enabled_site_setting :discourse_webhooks_example_enabled
 
 after_initialize do
+  register_seedfu_fixtures(Rails.root.join("plugins", "discourse-webhooks-example", "db", "fixtures").to_s)
+
   add_model_callback(:notification, :after_commit, on: :create) do
     # you can enqueue web hooks anywhere outside the AR transaction
     # provided that web hook event type exists
